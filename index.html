@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hand Cricket Showdown</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main class="wrap">
+        <header class="title">
+            <div class="title-wrap">
+                <img src="logo.png" alt="Hand Cricket Showdown logo" class="logo small-left" />
+                <div class="title-text">
+                    <h1>HAND CRICKET</h1>
+                    <h2>SHOWDOWN</h2>
+                </div>
+            </div>
+        </header>
+
+
+
+        <section class="hud">
+            <div class="scores">
+                <div id="youScore" class="pill cyan">You: 0</div>
+                <div id="cpuScore" class="pill cyan">CPU: 0</div>
+                <div id="revives" class="pill lime">Revives: 0/5</div>
+            </div>
+            <div id="status" class="status">Welcome!</div>
+            <div id="prompt" class="prompt">Tap a button to start</div>
+        </section>
+
+        <section id="screenTitle" class="panel">
+            <div class="row">
+                <button class="big gold" id="btnChooseNumber">Choose Number</button>
+                <button class="big cyan" id="btnModeSelect">Mode Select</button>
+            </div>
+        </section>
+
+        <section id="screenMode" class="panel hidden">
+            <h3 class="heading">Select Mode</h3>
+            <div class="row">
+                <button class="big gold" id="btnModeNormal">Normal</button>
+                <button class="big cyan" id="btnModeCrazy">Crazy</button>
+            </div>
+            <button class="pill" id="btnModeBack">Back</button>
+        </section>
+
+        <section id="screenTossParity" class="panel hidden">
+            <h3 class="heading">TOSS</h3>
+            <div class="row">
+                <button class="big gold" id="btnOdd">Odd</button>
+                <button class="big cyan" id="btnEven">Even</button>
+            </div>
+            <button class="pill" id="btnTossBack">Back</button>
+        </section>
+
+        <section id="screenTossNumber" class="panel hidden">
+            <h3 class="heading">CHOOSE NUMBER</h3>
+            <div class="grid" id="gridTossNums"></div>
+            <button class="pill" id="btnTossNumBack">Back</button>
+        </section>
+
+        <section id="screenChooseRole" class="panel hidden">
+            <h3 class="heading">You won the toss!</h3>
+            <div class="row">
+                <button class="big gold" id="btnBatFirst">Bat First</button>
+                <button class="big cyan" id="btnBowlFirst">Bowl First</button>
+            </div>
+        </section>
+
+        <section id="screenPlay" class="panel hidden">
+            <h3 class="heading" id="phaseHeading">Innings</h3>
+            <div class="grid" id="gridPlayNums"></div>
+            <div class="row actions">
+                <button class="pill cyan" id="btnRevive">Revive</button>
+                <button class="pill" id="btnSkip">Skip</button>
+                <button class="pill" id="btnReset">Reset</button>
+            </div>
+        </section>
+
+        <footer class="stage"></footer>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
